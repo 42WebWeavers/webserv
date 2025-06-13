@@ -1,1 +1,5 @@
-# This is a commint on main that should fail
+# WebServ Project
+
+Antoni Górski
+Paweł Rutkiewicz
+Zyta Słowiańska
