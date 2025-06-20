@@ -1,5 +1,5 @@
 # WebServ Project
 
-Antoni Górski
-Paweł Rutkiewicz
-Zyta Słowiańska
+Antoni Górski - present
+Paweł Rutkiewicz - present
+Zyta Słowiańska - absent
