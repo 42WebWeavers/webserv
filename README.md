@@ -10,6 +10,10 @@ Minimal read:<br>
 - Section 6 (Response)
 - Section 9 (Methods like GET, POST, PUT)
 
+### Guide to Network Programming
+[Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/split/index.html)
+by Brian "Beej Jorgensen" Hall
+
 ### Common Gateway Interface
 [Common Gateway Interface Standard](https://www.rfc-editor.org/info/rfc3875)<br>
 [CGI Wikipedia](https://en.wikipedia.org/wiki/Common_Gateway_Interface)<br>
@@ -36,5 +40,6 @@ Zyta Słowiańska<br>
 | 2025-06-20 |      ✅       |        ✅        |       ❌        |
 | 2025-06-27 |      ✅       |        ✅        |       ✅        |
 | 2025-07-04 |      ✅       |        ✅        |       ✅        |
+| 2025-07-15 |      ✅       |        ✅        |       ✅        |
 
 *Mark presence with ✅ and absence with ❌. Add more rows as needed.*
