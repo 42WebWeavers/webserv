@@ -10,7 +10,7 @@ Minimal read:<br>
 - Section 6 (Response)
 - Section 9 (Methods like GET, POST, PUT)
 
-### Guide to Networking Programming
+### Guide to Network Programming
 [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/split/index.html)
 by Brian "Beej Jorgensen" Hall
 
