@@ -6,7 +6,7 @@
 /*   By: prutkows <prutkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 19:03:34 by prutkows          #+#    #+#             */
-/*   Updated: 2025/07/18 16:57:45 by prutkows         ###   ########.fr       */
+/*   Updated: 2025/07/20 18:38:14 by prutkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <string>
 #include <cstdlib>
 #include "HttpRequest.hpp"
-// #include "HttpResponse.hpp"
+#include "HttpResponse.hpp"
 
 // http://localhost:8080
 
@@ -80,16 +80,42 @@ void handleClient(int client_fd)
 		close(client_fd);
 		return;
 	}
-	// temporary response
-	const char *response =
-		"HTTP/1.1 200 OK\r\n"
-		"Content-Type: text/html\r\n"
-		"Content-Length: 47\r\n"
-		"\r\n"
-		"<html><body><h1>Request received</h1></body></html>";
+
+	// HttpResponse response(200, "OK");
+	// response.setHeader("Content-Type", "text/html");
+	// response.setBody("<html><body><h1>Request received</h1></body></html>");
+
+	HttpResponse response;
+
+	if (request.getMethod() == "GET" && request.getPath() == "/")
+	{
+		response.setStatus(200, "OK");
+		response.setHeader("Content-Type", "text/html");
+		response.setBody("<html><body><h1>Welcome to the root!</h1></body></html>");
+	}
+	else if (request.getMethod() == "GET" && request.getPath() == "/hello")
+	{
+		response.setStatus(200, "OK");
+		response.setHeader("Content-Type", "text/html");
+		response.setBody("<html><body><h1>Hello, world!</h1></body></html>");
+	}
+	else if (request.getMethod() == "POST" && request.getPath() == "/echo")
+	{
+		response.setStatus(200, "OK");
+		response.setHeader("Content-Type", "text/plain");
+		response.setBody("Received POST with body:\n" + request.getBody());
+	}
+	else
+	{
+		response.setStatus(404, "Not Found");
+		response.setHeader("Content-Type", "text/html");
+		response.setBody("<html><body><h1>404 - Not Found</h1></body></html>");
+	}
+
+	std::string out = response.toString();
 
 	std::cout << request.toString() << std::endl;
-	write(client_fd, response, std::strlen(response));
+	write(client_fd, out.c_str(), out.size());
 	close(client_fd);
 }
 
