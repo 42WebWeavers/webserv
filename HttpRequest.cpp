@@ -6,7 +6,7 @@
 /*   By: prutkows <prutkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 19:04:52 by prutkows          #+#    #+#             */
-/*   Updated: 2025/07/18 16:57:13 by prutkows         ###   ########.fr       */
+/*   Updated: 2025/07/20 18:30:57 by prutkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,31 @@ std::string HttpRequest::getHeader(const std::string &key) const
 	if (it != headers.end())
 		return it->second;
 	return "";
+}
+
+std::string HttpRequest::getMethod() const
+{
+	return method;
+}
+
+std::string HttpRequest::getPath() const
+{
+	return path;
+}
+
+std::string HttpRequest::getVersion() const
+{
+	return version;
+}
+
+std::string HttpRequest::getBody() const
+{
+	return body;
+}
+
+bool HttpRequest::isValid() const
+{
+	return valid;
 }
 
 std::string HttpRequest::toString() const

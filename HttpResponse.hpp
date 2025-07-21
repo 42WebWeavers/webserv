@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HttpRequest.hpp                                    :+:      :+:    :+:   */
+/*   HttpResponse.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: prutkows <prutkows@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 19:04:49 by prutkows          #+#    #+#             */
-/*   Updated: 2025/07/20 18:32:02 by prutkows         ###   ########.fr       */
+/*   Created: 2025/07/18 17:07:30 by prutkows          #+#    #+#             */
+/*   Updated: 2025/07/20 17:52:14 by prutkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HTTPREQUEST_HPP
-#define HTTPREQUEST_HPP
+#ifndef HTTPRESPONSE_HPP
+#define HTTPRESPONSE_HPP
 
 #include <string>
 #include <map>
 
-class HttpRequest
+class HttpResponse
 {
 private:
-	std::string method;
-	std::string path;
-	std::string version;
+	int statusCode;
+	std::string statusMessage;
 	std::map<std::string, std::string> headers;
 	std::string body;
-	bool valid;
 
 public:
-	bool parse(const std::string &raw);
-	std::string getHeader(const std::string &key) const;
-	std::string getMethod() const;
-	std::string getPath() const;
-	std::string getVersion() const;
-	std::string getBody() const;
-	bool isValid() const;
+	HttpResponse(int code = 200, const std::string &message = "OK");
+
+	void setHeader(const std::string &key, const std::string &value);
+	void setBody(const std::string &content);
+	void setStatus(int code, const std::string &message);
+
 	std::string toString() const;
 };
 
