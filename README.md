@@ -41,5 +41,6 @@ Zyta Słowiańska<br>
 | 2025-06-27 |      ✅       |        ✅        |       ✅        |
 | 2025-07-04 |      ✅       |        ✅        |       ✅        |
 | 2025-07-15 |      ✅       |        ✅        |       ✅        |
+| 2025-07-22 |      ✅       |        ✅        |       ❌        |
 
 *Mark presence with ✅ and absence with ❌. Add more rows as needed.*
