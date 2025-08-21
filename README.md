@@ -1,5 +1,5 @@
 Webserv Config Parser
-This repository contains a simple C++98 configuration parser for a web server project (42 school style).
+This repository contains a simple C++98 configuration parser for a web server project.
 
 Key features:
 
