@@ -30,7 +30,7 @@ by Brian "Beej Jorgensen" Hall
 
 ### Authors
 Antoni Górski<br>
-Paweł Rutkiewicz<br>
+Paweł Rutkowski<br>
 Zyta Słowiańska<br>
 
 ### Meetings calendar
