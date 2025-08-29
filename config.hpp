@@ -1,3 +1,5 @@
+//Copyright [2025] <Antoni Gorski> <agorski@student.42warsaw.pl>
+
 #pragma once
 
 #include <string>
