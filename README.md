@@ -28,6 +28,114 @@ by Brian "Beej Jorgensen" Hall
 
 ## Project information
 
+# Webserv Config Parser
+
+This repository contains a simple C++98 configuration parser for a web server project.
+
+## Key features:
+
+Parses a custom config file format inspired by NGINX.
+Supports multiple servers and multiple routes (locations) per server.
+Handles settings such as:
+Listening port, host, server name
+Error pages
+Root and index files
+Allowed HTTP methods
+Directory listing (autoindex)
+File upload directory (per route)
+CGI paths and extensions
+HTTP redirections
+
+## Main files:
+
+config.hpp – data structures for server and route configuration.
+config.cpp – parser implementation.
+main.cpp – example usage: loads config and prints parsed data.
+default.conf – example configuration file.
+Usage:
+
+Build with: makeWebserv Config Parser
+This repository contains a simple C++98 configuration parser for a web server project (42 school style).
+
+Key features:
+
+Parses a custom config file format inspired by NGINX.
+Supports multiple servers and multiple routes (locations) per server.
+Handles settings such as:
+Listening port, host, server name
+Error pages
+Root and index files
+Allowed HTTP methods
+Directory listing (autoindex)
+File upload directory (per route)
+CGI paths and extensions
+HTTP redirections
+Main files:
+
+config.hpp – data structures for server and route configuration.
+config.cpp – parser implementation.
+main.cpp – example usage: loads config and prints parsed data.
+default.conf – example configuration file.
+Usage:
+
+Build with:
+Run:Webserv Config Parser
+This repository contains a simple C++98 configuration parser for a web server project (42 school style).
+
+Key features:
+
+Parses a custom config file format inspired by NGINX.
+Supports multiple servers and multiple routes (locations) per server.
+Handles settings such as:
+Listening port, host, server name
+Error pages
+Root and index files
+Allowed HTTP methods
+Directory listing (autoindex)
+File upload directory (per route)
+CGI paths and extensions
+HTTP redirections
+Main files:
+
+config.hpp – data structures for server and route configuration.
+config.cpp – parser implementation.
+main.cpp – example usage: loads config and prints parsed data.
+default.conf – example configuration file.
+Usage:
+
+Build with:
+Run:Webserv Config Parser
+This repository contains a simple C++98 configuration parser for a web server project (42 school style).
+
+Key features:
+
+Parses a custom config file format inspired by NGINX.
+Supports multiple servers and multiple routes (locations) per server.
+Handles settings such as:
+Listening port, host, server name
+Error pages
+Root and index files
+Allowed HTTP methods
+Directory listing (autoindex)
+File upload directory (per route)
+CGI paths and extensions
+HTTP redirections
+Main files:
+
+config.hpp – data structures for server and route configuration.
+config.cpp – parser implementation.
+main.cpp – example usage: loads config and prints parsed data.
+default.conf – example configuration file.
+Usage:
+
+Build with: make
+Run: ./WebServer
+Output: parsed config data for all servers and routes. Write data on standard output.
+
+# or use the following command:
+```bash
+g++ -Wall -Wextra -Werror -std=c++98 main.cpp config.cpp -o WebServer
+
 ### Authors
 Antoni Górski<br>
 Paweł Rutkowski<br>
